@@ -55,11 +55,11 @@ body {
   position: relative;
 }
 
-/* Localized Distinct Warm Beige Spotlight Reveal for Hero Typography (#F5F5F5 -> #D8B98A under cursor) */
+/* Localized Deep Navy Blue Spotlight Reveal for Hero Typography (#F5F5F5 -> #142B4A under cursor) */
 .masked-hero-wrapper {
   position: relative;
   display: inline-block;
-  width: 100%;
+  width: fit-content;
 }
 
 .masked-hero-base {
@@ -74,11 +74,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  color: #D8B98A;
+  color: #142B4A;
   z-index: 2;
   pointer-events: none;
   opacity: var(--mouse-opacity, 0);
-  text-shadow: 0 0 16px rgba(216, 185, 138, 0.6);
   /* Localized radial mask centered on local element mouse coordinates */
   mask-image: radial-gradient(
     circle 55px at var(--mouse-x, -999px) var(--mouse-y, -999px),
@@ -92,7 +91,7 @@ body {
     rgba(0, 0, 0, 0.85) 60%,
     rgba(0, 0, 0, 0) 100%
   );
-  transition: opacity 0.15s ease;
+  transition: opacity 0.3s ease;
 }
 
 /* Dual Layer Masked Typography Interaction — Cream Lens Color Swap (No Scale/Distortion) */

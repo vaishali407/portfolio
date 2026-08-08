@@ -31,7 +31,7 @@ const HeroTextReveal: React.FC<{ text: string; className?: string }> = ({ text, 
       ref={wrapperRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="masked-hero-wrapper leading-none relative inline-block w-full select-none cursor-default"
+      className="masked-hero-wrapper leading-none relative inline-block w-fit select-none cursor-default"
     >
       <h1 className={`masked-hero-base ${className}`}>{text}</h1>
       <h1 className={`masked-hero-cream ${className}`}>{text}</h1>
