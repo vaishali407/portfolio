@@ -108,7 +108,7 @@ export const Projects: React.FC = () => {
 
         {/* Editorial Art-Directed Layout with Generous 160–220px Vertical Separation */}
         <div className="space-y-44 md:space-y-56">
-          {/* PROJECT 01 — Large Left Image, Right Text Offset */}
+          {/* PROJECT 01 — VOXA Multilingual Real-Time Chat Platform */}
           <div
             onClick={() => setSelectedProject(projectsData[0])}
             onMouseEnter={() => setCursorState("project", "VIEW CASE")}
@@ -116,14 +116,30 @@ export const Projects: React.FC = () => {
             className="group cursor-pointer grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
           >
             <div className="lg:col-span-8 relative">
-              <div className="relative h-[340px] sm:h-[440px] lg:h-[520px] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#111111] transition-all duration-500 group-hover:border-[#67B7FF]/60 group-hover:shadow-[0_0_60px_rgba(103,201,107,0.18)]">
+              {/* Primary Screenshot (VOXA Chat Interface) */}
+              <div className="relative h-[340px] sm:h-[440px] lg:h-[520px] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#090D16] transition-all duration-500 group-hover:border-[#67B7FF]/60 group-hover:shadow-[0_0_60px_rgba(103,183,255,0.18)]">
                 <Image
-                  src={projectsData[0].image}
-                  alt={projectsData[0].title}
+                  src="/images/voxa_preview.png"
+                  alt="VOXA Real-Time Multilingual Chat Interface Screenshot"
                   fill
-                  className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]"
+                  priority
+                  className="object-cover object-left-top transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.03]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/70 via-transparent to-transparent opacity-50" />
+              </div>
+
+              {/* Floating Secondary Screenshot (VOXA Welcome & Join Interface) */}
+              <div className="hidden sm:block absolute -bottom-6 -right-4 md:-bottom-8 md:-right-6 w-44 md:w-56 h-56 md:h-72 rounded-xl overflow-hidden border border-white/20 shadow-2xl bg-[#090D16] z-10 transition-transform duration-700 group-hover:scale-[1.04] group-hover:-translate-y-2">
+                <Image
+                  src="/images/voxa_join_preview.png"
+                  alt="VOXA Welcome & Join Screen Screenshot"
+                  fill
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 via-transparent to-transparent opacity-40" />
+                <div className="absolute bottom-2 left-2 right-2 p-1.5 bg-[#080808]/90 rounded border border-white/10 font-mono text-[9px] text-[#67B7FF] text-center font-bold tracking-wider uppercase">
+                  JOIN INTERFACE
+                </div>
               </div>
             </div>
 

@@ -57,15 +57,42 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {project.subtitle}
         </p>
 
-        {/* Hero Image */}
-        <div className="relative h-64 md:h-96 w-full rounded-xl overflow-hidden border border-white/10 mb-8 bg-[#080808]">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover"
-          />
-        </div>
+        {/* Hero Image / Screenshots Grid */}
+        {project.title === "VOXA" ? (
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mb-8">
+            <div className="md:col-span-8 relative h-64 md:h-96 w-full rounded-xl overflow-hidden border border-white/10 bg-[#090D16]">
+              <Image
+                src="/images/voxa_preview.png"
+                alt="VOXA Chat Interface Screenshot"
+                fill
+                className="object-cover object-left-top"
+              />
+              <div className="absolute bottom-2 left-2 p-1.5 bg-[#080808]/90 rounded border border-white/10 font-mono text-[9px] text-[#67B7FF] font-bold uppercase">
+                CHAT INTERFACE
+              </div>
+            </div>
+            <div className="md:col-span-4 relative h-64 md:h-96 w-full rounded-xl overflow-hidden border border-white/10 bg-[#090D16]">
+              <Image
+                src="/images/voxa_join_preview.png"
+                alt="VOXA Welcome & Join Screenshot"
+                fill
+                className="object-cover object-center"
+              />
+              <div className="absolute bottom-2 left-2 p-1.5 bg-[#080808]/90 rounded border border-white/10 font-mono text-[9px] text-[#67B7FF] font-bold uppercase">
+                WELCOME INTERFACE
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="relative h-64 md:h-96 w-full rounded-xl overflow-hidden border border-white/10 mb-8 bg-[#080808]">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+            />
+          </div>
+        )}
 
         {/* Content Section */}
         <div className="space-y-8">
