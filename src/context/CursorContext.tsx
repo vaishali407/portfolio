@@ -41,19 +41,18 @@ export const CursorProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
     const handleMouseMove = (e: MouseEvent) => {
       mousePos.current = { x: e.clientX, y: e.clientY };
+      // Instant real-time update of CSS variables for 0ms lag text masking
+      document.documentElement.style.setProperty("--cursor-x", `${e.clientX}px`);
+      document.documentElement.style.setProperty("--cursor-y", `${e.clientY}px`);
     };
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
-    // GSAP Ticker for smooth lerping
+    // GSAP Ticker for smooth lerped cursor calculations
     const ticker = gsap.ticker.add(() => {
       const ease = 0.12; // Lerp inertia factor
       lerpPos.current.x += (mousePos.current.x - lerpPos.current.x) * ease;
       lerpPos.current.y += (mousePos.current.y - lerpPos.current.y) * ease;
-
-      // Update CSS variables for high-performance localized masking
-      document.documentElement.style.setProperty("--cursor-x", `${lerpPos.current.x}px`);
-      document.documentElement.style.setProperty("--cursor-y", `${lerpPos.current.y}px`);
     });
 
     return () => {
