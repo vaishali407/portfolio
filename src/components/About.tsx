@@ -126,7 +126,7 @@ export const About: React.FC = () => {
                   alt="Vaishali Negi — Full-Stack Developer Portrait"
                   fill
                   priority
-                  className="object-cover object-center transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04] filter contrast-[1.02] brightness-[0.98]"
+                  className="object-cover object-center transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04] filter contrast-[1.03] brightness-[0.97] saturate-[0.92]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 via-transparent to-transparent opacity-60" />
               </div>

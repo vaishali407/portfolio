@@ -87,9 +87,9 @@ export const Hero: React.FC = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[100svh] w-full pt-32 pb-12 px-6 md:px-12 lg:px-16 flex flex-col justify-between bg-[#080808] bg-grain overflow-hidden"
+      className="relative min-h-[100svh] w-full pt-28 pb-8 px-6 md:px-12 lg:px-16 flex flex-col justify-between bg-[#080808] bg-grain overflow-hidden"
     >
-      <div className="max-w-[1600px] mx-auto w-full my-auto flex flex-col justify-between min-h-[82vh] space-y-8">
+      <div className="max-w-[1600px] mx-auto w-full my-auto flex flex-col justify-between min-h-[76vh] space-y-6">
         
         {/* TOP: Identity Name (Visual weight clamp 1.8rem to 3.5rem) */}
         <div className="hero-stagger flex flex-col space-y-1">

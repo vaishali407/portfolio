@@ -57,36 +57,37 @@ export const Skills: React.FC = () => {
           </h2>
         </div>
 
-        {/* Editorial Typographic List */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+        {/* Editorial Compact Typographic Categories */}
+        <div className="space-y-12 max-w-5xl">
           {skillCategories.map((cat, idx) => (
             <div
               key={cat.title}
-              className={`space-y-6 ${
-                idx === 0 || idx === 1 ? "md:col-span-6" : "md:col-span-4"
-              }`}
+              className="group border-b border-white/10 pb-8 space-y-4 transition-all hover:border-[#67C96B]/40"
             >
-              <div className="flex items-center gap-3 border-b border-white/10 pb-3 font-mono text-xs text-[#67C96B] tracking-wider uppercase">
+              <div className="flex items-center gap-3 font-mono text-xs text-[#67C96B] tracking-[0.18em] uppercase">
                 <span>0{idx + 1}</span>
                 <span>/</span>
-                <span>{cat.title}</span>
+                <span className="text-[#777777] group-hover:text-[#67C96B] transition-colors">
+                  {cat.title}
+                </span>
               </div>
 
-              <div className="flex flex-col space-y-3">
-                {cat.skills.map((skill) => (
-                  <div
-                    key={skill}
-                    onMouseEnter={() => setCursorState("button")}
-                    onMouseLeave={resetCursorState}
-                    className="group flex items-center justify-between py-2 border-b border-white/5 transition-all hover:border-[#67C96B]/50 hover:pl-2"
-                  >
-                    <span className="text-lg md:text-xl font-sans text-[#8A8A8A] transition-colors group-hover:text-[#F5F5F5]">
+              <div
+                onMouseEnter={() => setCursorState("text")}
+                onMouseLeave={resetCursorState}
+                className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xl md:text-2xl font-sans text-[#8A8A8A] font-light leading-relaxed"
+              >
+                {cat.skills.map((skill, sIdx) => (
+                  <React.Fragment key={skill}>
+                    <span className="transition-colors hover:text-[#F5F5F5] cursor-default">
                       {skill}
                     </span>
-                    <span className="font-mono text-xs text-transparent group-hover:text-[#67C96B] transition-all">
-                      +
-                    </span>
-                  </div>
+                    {sIdx < cat.skills.length - 1 && (
+                      <span className="text-[#67C96B]/40 font-mono text-base select-none">
+                        ·
+                      </span>
+                    )}
+                  </React.Fragment>
                 ))}
               </div>
             </div>
