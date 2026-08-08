@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background-color: #080C14; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142B4A"/>
+      <stop offset="100%" stop-color="#080C14"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#67B7FF"/>
+      <stop offset="100%" stop-color="#8CC8FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Grid -->
+  <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="675" fill="url(#gridPattern)"/>
+
+  <!-- Top Header Metadata Bar -->
+  <rect x="40" y="35" width="1120" height="50" rx="8" fill="#111726" stroke="rgba(103, 183, 255, 0.2)" stroke-width="1"/>
+  <text x="60" y="66" fill="#67B7FF" font-family="monospace" font-size="14" font-weight="bold" letter-spacing="2">DEEPFAKE DETECTION SYSTEM</text>
+  <text x="360" y="66" fill="#777777" font-family="monospace" font-size="12">|</text>
+  <text x="380" y="66" fill="#F5F5F5" font-family="monospace" font-size="12">EPICS RESEARCH REPORT — VIT BHOPAL</text>
+  <rect x="940" y="47" width="200" height="26" rx="13" fill="#182F48" stroke="#67B7FF" stroke-width="1"/>
+  <text x="1040" y="64" fill="#67B7FF" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">TEAM PROJECT · 5 MEMBERS</text>
+
+  <!-- MAIN PIPELINE DIAGRAM (LEFT 60%) -->
+  <g transform="translate(40, 110)">
+    <!-- Stage 1: Input & MTCNN Preprocessing -->
+    <rect x="0" y="0" width="340" height="150" rx="12" fill="#111726" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="20" y="30" fill="#67B7FF" font-family="monospace" font-size="12" font-weight="bold">01 / INPUT &amp; PREPROCESSING</text>
+    
+    <rect x="20" y="48" width="140" height="82" rx="6" fill="#182438" stroke="rgba(103,183,255,0.3)"/>
+    <text x="90" y="80" fill="#F5F5F5" font-size="12" font-weight="bold" text-anchor="middle">Input Sample</text>
+    <text x="90" y="98" fill="#8A8A8A" font-mono font-size="10" text-anchor="middle">224 × 224 × 3</text>
+
+    <text x="180" y="94" fill="#67B7FF" font-size="16" font-weight="bold">➔</text>
+
+    <rect x="200" y="48" width="120" height="82" rx="6" fill="#182438" stroke="rgba(103,183,255,0.3)"/>
+    <text x="260" y="78" fill="#67B7FF" font-size="11" font-weight="bold" text-anchor="middle">MTCNN Face</text>
+    <text x="260" y="94" fill="#67B7FF" font-size="11" font-weight="bold" text-anchor="middle">Extraction</text>
+    <text x="260" y="112" fill="#8A8A8A" font-mono font-size="9" text-anchor="middle">Bounding Box</text>
+
+    <!-- Stage 2: Deep Learning Models Comparison -->
+    <rect x="0" y="185" width="670" height="340" rx="12" fill="#111726" stroke="rgba(103,183,255,0.25)" stroke-width="1.5"/>
+    <text x="20" y="215" fill="#67B7FF" font-family="monospace" font-size="12" font-weight="bold">02 / MODEL ARCHITECTURES EVALUATED</text>
+
+    <!-- Architecture Box 1: Baseline CNN -->
+    <rect x="20" y="235" width="195" height="110" rx="8" fill="#0D1322" stroke="rgba(255,255,255,0.1)"/>
+    <text x="32" y="258" fill="#F5F5F5" font-size="13" font-weight="bold">Custom CNN</text>
+    <text x="32" y="276" fill="#8A8A8A" font-size="10">3× Conv2D + MaxPool</text>
+    <text x="32" y="292" fill="#8A8A8A" font-size="10">Dense 128 ReLU + Dropout</text>
+    <text x="32" y="325" fill="#67B7FF" font-family="monospace" font-size="12" font-weight="bold">Acc: 88.38%</text>
+
+    <!-- Architecture Box 2: CNN + LSTM (Vaishali's Evaluated Model) -->
+    <rect x="235" y="235" width="200" height="110" rx="8" fill="#0D1322" stroke="rgba(103,183,255,0.3)"/>
+    <text x="247" y="258" fill="#F5F5F5" font-size="13" font-weight="bold">CNN + LSTM Hybrid</text>
+    <text x="247" y="276" fill="#8A8A8A" font-size="10">Spatial Reshape to Seq</text>
+    <text x="247" y="292" fill="#8A8A8A" font-size="10">LSTM 64 Units</text>
+    <text x="247" y="310" fill="#777777" font-size="10">Vaishali's Dataset-2 Eval</text>
+    <text x="247" y="330" fill="#8A8A8A" font-family="monospace" font-size="11">Spatial Limitation</text>
+
+    <!-- Architecture Box 3: InceptionV3 + Attention (Best Model - 100%) -->
+    <rect x="455" y="235" width="195" height="270" rx="8" fill="#182F48" stroke="#67B7FF" stroke-width="2"/>
+    <rect x="465" y="245" width="175" height="24" rx="4" fill="#67B7FF"/>
+    <text x="552" y="261" fill="#080C14" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">BEST ARCHITECTURE</text>
+
+    <text x="470" y="290" fill="#F5F5F5" font-size="13" font-weight="bold">InceptionV3 + Attention</text>
+    <text x="470" y="310" fill="#8CC8FF" font-size="10">• Pre-trained Transfer Backbone</text>
+    <text x="470" y="328" fill="#8CC8FF" font-size="10">• Attention Gate (Dense 2048)</text>
+    <text x="470" y="346" fill="#8CC8FF" font-size="10">• Selective Feature Weighting</text>
+    <text x="470" y="364" fill="#8CC8FF" font-size="10">• Focuses on Eyes &amp; Mouth</text>
+    <line x1="470" y1="380" x2="635" y2="380" stroke="rgba(103,183,255,0.3)" stroke-width="1"/>
+    <text x="470" y="405" fill="#F5F5F5" font-size="12" font-weight="bold">Test Accuracy: 100.0%</text>
+    <text x="470" y="425" fill="#67B7FF" font-mono font-size="11">Val Loss: 0.0077</text>
+    <text x="470" y="445" fill="#67B7FF" font-mono font-size="11">0 False Misclassifications</text>
+    <rect x="470" y="460" width="165" height="30" rx="4" fill="#67B7FF"/>
+    <text x="552" y="480" fill="#080C14" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">100% CONFUSION MATRIX</text>
+
+    <!-- Architecture Box 4: VGG16 + MTCNN -->
+    <rect x="20" y="360" width="195" height="145" rx="8" fill="#0D1322" stroke="rgba(255,255,255,0.1)"/>
+    <text x="32" y="383" fill="#F5F5F5" font-size="13" font-weight="bold">VGG16 + MTCNN</text>
+    <text x="32" y="401" fill="#8A8A8A" font-size="10">16-Layer Deep Conv</text>
+    <text x="32" y="417" fill="#8A8A8A" font-size="10">MTCNN Isolated Face</text>
+    <text x="32" y="450" fill="#67B7FF" font-family="monospace" font-size="12" font-weight="bold">Acc: 99.24%</text>
+
+    <!-- Architecture Box 5: InceptionV3 Standard -->
+    <rect x="235" y="360" width="200" height="145" rx="8" fill="#0D1322" stroke="rgba(255,255,255,0.1)"/>
+    <text x="247" y="383" fill="#F5F5F5" font-size="13" font-weight="bold">InceptionV3 Standard</text>
+    <text x="247" y="401" fill="#8A8A8A" font-size="10">Multi-Scale Parallel Filters</text>
+    <text x="247" y="417" fill="#8A8A8A" font-size="10">ImageNet Pre-trained</text>
+    <text x="247" y="450" fill="#67B7FF" font-family="monospace" font-size="12" font-weight="bold">Acc: 99.24%</text>
+  </g>
+
+  <!-- RIGHT EVALUATION CHARTS & ACCURACY COMPARISON (RIGHT 40%) -->
+  <g transform="translate(730, 110)">
+    <rect x="0" y="0" width="430" height="515" rx="12" fill="#111726" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="20" y="30" fill="#67B7FF" font-family="monospace" font-size="12" font-weight="bold">03 / FINAL MODEL COMPARISON — ACCURACY</text>
+
+    <!-- Accuracy Bar Chart -->
+    <text x="25" y="70" fill="#8A8A8A" font-mono font-size="10">InceptionV3 + Attention</text>
+    <rect x="25" y="78" width="380" height="24" rx="4" fill="#182438"/>
+    <rect x="25" y="78" width="380" height="24" rx="4" fill="url(#accentGrad)"/>
+    <text x="395" y="95" fill="#080C14" font-mono font-size="11" font-weight="bold" text-anchor="end">100.0% (1.000)</text>
+
+    <text x="25" y="125" fill="#8A8A8A" font-mono font-size="10">VGG16 + MTCNN</text>
+    <rect x="25" y="133" width="380" height="24" rx="4" fill="#182438"/>
+    <rect x="25" y="133" width="377" height="24" rx="4" fill="#67B7FF" opacity="0.85"/>
+    <text x="390" y="150" fill="#080C14" font-mono font-size="11" font-weight="bold" text-anchor="end">99.24%</text>
+
+    <text x="25" y="180" fill="#8A8A8A" font-mono font-size="10">CNN + InceptionV3</text>
+    <rect x="25" y="188" width="380" height="24" rx="4" fill="#182438"/>
+    <rect x="25" y="188" width="377" height="24" rx="4" fill="#67B7FF" opacity="0.75"/>
+    <text x="390" y="205" fill="#080C14" font-mono font-size="11" font-weight="bold" text-anchor="end">99.24%</text>
+
+    <text x="25" y="235" fill="#8A8A8A" font-mono font-size="10">Baseline Custom CNN</text>
+    <rect x="25" y="243" width="380" height="24" rx="4" fill="#182438"/>
+    <rect x="25" y="243" width="335" height="24" rx="4" fill="#67B7FF" opacity="0.5"/>
+    <text x="350" y="260" fill="#F5F5F5" font-mono font-size="11" font-weight="bold" text-anchor="end">88.38%</text>
+
+    <text x="25" y="290" fill="#8A8A8A" font-mono font-size="10">CNN + LSTM Hybrid (Vaishali Eval)</text>
+    <rect x="25" y="298" width="380" height="24" rx="4" fill="#182438"/>
+    <rect x="25" y="298" width="216" height="24" rx="4" fill="#67B7FF" opacity="0.3"/>
+    <text x="230" y="315" fill="#F5F5F5" font-mono font-size="11" text-anchor="end">57.07%</text>
+
+    <text x="25" y="345" fill="#8A8A8A" font-mono font-size="10">Standalone LSTM</text>
+    <rect x="25" y="353" width="380" height="24" rx="4" fill="#182438"/>
+    <rect x="25" y="353" width="202" height="24" rx="4" fill="#67B7FF" opacity="0.2"/>
+    <text x="215" y="370" fill="#8A8A8A" font-mono font-size="11" text-anchor="end">53.28%</text>
+
+    <!-- Confusion Matrix Box -->
+    <g transform="translate(25, 395)">
+      <rect x="0" y="0" width="380" height="100" rx="8" fill="#0D1322" stroke="rgba(103,183,255,0.2)"/>
+      <text x="15" y="22" fill="#67B7FF" font-mono font-size="11" font-weight="bold">CONFUSION MATRIX (InceptionV3 + Attention)</text>
+      <text x="15" y="48" fill="#F5F5F5" font-size="11">Real Images Correctly Classified:</text>
+      <text x="365" y="48" fill="#67B7FF" font-mono font-size="11" font-weight="bold" text-anchor="end">209 / 209 (100%)</text>
+      <text x="15" y="70" fill="#F5F5F5" font-size="11">Fake Images Correctly Classified:</text>
+      <text x="365" y="70" fill="#67B7FF" font-mono font-size="11" font-weight="bold" text-anchor="end">187 / 187 (100%)</text>
+      <text x="15" y="90" fill="#8A8A8A" font-mono font-size="10">Misclassifications: 0 False Positives / 0 False Negatives</text>
+    </g>
+  </g>
+</svg>

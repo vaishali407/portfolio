@@ -54,22 +54,23 @@ export const projectsData: ProjectData[] = [
   {
     id: "deepfake-detection",
     title: "DEEPFAKE DETECTION SYSTEM",
-    subtitle: "AI-BASED DEEPFAKE DETECTION",
-    category: "AI / COMPUTER VISION",
-    tech: ["Python", "TensorFlow", "OpenCV", "CNN", "VGG16", "InceptionV3", "LSTM", "MTCNN"],
+    subtitle: "MACHINE LEARNING / COMPUTER VISION",
+    category: "MACHINE LEARNING / COMPUTER VISION",
+    tech: ["Python", "TensorFlow", "InceptionV3", "Attention Mechanism", "MTCNN", "VGG16", "CNN+LSTM"],
     description:
-      "An AI-based deepfake detection system evaluating multiple deep learning models.",
+      "A comparative deep learning system evaluating CNN, LSTM, VGG16, and InceptionV3 + Attention architectures for facial manipulation detection.",
     highlight:
-      "Used MTCNN for face detection and evaluated model performance using accuracy, validation loss and confusion matrices.",
-    image: "/images/deepfake_detection_preview.png",
+      "TEAM PROJECT · 5 MEMBERS — InceptionV3 + Attention achieved 100.0% test accuracy with 0 misclassifications on Dataset 1.",
+    image: "/images/deepfake_detection_preview.svg",
     details: {
       overview:
-        "A computer vision pipeline designed to analyze digital video frames for facial manipulation artifacts. By coupling MTCNN facial extraction with deep convolutional networks and sequence analyzers, the system scores spatial and temporal anomalies.",
+        "A comprehensive EPICS engineering research project at VIT Bhopal University evaluating multiple deep learning architectures for facial manipulation detection. The system incorporates MTCNN face isolation preprocessing, VGG16 transfer learning, CNN+LSTM hybrids, and an InceptionV3 model augmented with a spatial-channel attention mechanism.",
       keyFeatures: [
-        "MTCNN facial bounding box localization & frame alignment",
-        "Multi-architecture evaluation (CNN, VGG16, InceptionV3, LSTM)",
-        "Quantitative confusion matrix & validation loss benchmarking",
-        "OpenCV video frame stream extraction pipeline",
+        "InceptionV3 + Attention architecture achieving 100.0% test accuracy (0 false positives / negatives)",
+        "MTCNN (Multi-task Cascaded CNN) for facial bounding box extraction & background noise removal",
+        "Comparative benchmark across 6 model configurations on Dataset 1 & Dataset 2",
+        "Vaishali's Role: CNN + LSTM hybrid model training, hyperparameter tuning & Dataset 2 performance evaluation",
+        "Team Members: Mayank Pandey, Mansi Jain, Sadique Nomani, Vasudha Sharma, Vaishali Negi",
       ],
     },
     githubUrl: "https://github.com/vaishali407",
@@ -106,7 +107,7 @@ export const Projects: React.FC = () => {
           </h2>
         </div>
 
-        {/* Editorial Art-Directed Layout with Generous 160–220px Vertical Separation */}
+        {/* Editorial Art-Directed Layout with Generous Vertical Separation */}
         <div className="space-y-44 md:space-y-56">
           {/* PROJECT 01 — VOXA Multilingual Real-Time Chat Platform */}
           <div
@@ -196,7 +197,7 @@ export const Projects: React.FC = () => {
             </div>
 
             <div className="lg:col-span-8 order-1 lg:order-2">
-              <div className="relative h-[340px] sm:h-[440px] lg:h-[500px] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#111111] transition-all duration-500 group-hover:border-[#67B7FF]/60 group-hover:shadow-[0_0_60px_rgba(103,201,107,0.18)]">
+              <div className="relative h-[340px] sm:h-[440px] lg:h-[500px] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#111111] transition-all duration-500 group-hover:border-[#67B7FF]/60 group-hover:shadow-[0_0_60px_rgba(103,183,255,0.18)]">
                 <Image
                   src={projectsData[1].image}
                   alt={projectsData[1].title}
@@ -208,18 +209,20 @@ export const Projects: React.FC = () => {
             </div>
           </div>
 
-          {/* PROJECT 03 — Centered Editorial Image with Overlapping Header */}
+          {/* PROJECT 03 — DEEPFAKE DETECTION SYSTEM (Team Project Research Architecture) */}
           <div
             onClick={() => setSelectedProject(projectsData[2])}
             onMouseEnter={() => setCursorState("project", "VIEW CASE")}
             onMouseLeave={resetCursorState}
-            className="group cursor-pointer max-w-5xl mx-auto space-y-6"
+            className="group cursor-pointer max-w-6xl mx-auto space-y-6"
           >
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-4">
               <div>
-                <span className="font-mono text-xs text-[#67B7FF] tracking-[0.15em] uppercase font-bold">
-                  03 / {projectsData[2].category}
-                </span>
+                <div className="flex items-center gap-3 font-mono text-xs text-[#67B7FF] tracking-[0.15em] uppercase font-bold mb-1">
+                  <span>03 / {projectsData[2].category}</span>
+                  <span>•</span>
+                  <span className="rounded bg-[#182F48] px-2.5 py-0.5 text-[#67B7FF]">TEAM PROJECT · 5 MEMBERS</span>
+                </div>
                 <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-[#F5F5F5] group-hover:text-[#67B7FF] transition-colors mt-1">
                   {projectsData[2].title}
                 </h3>
@@ -229,20 +232,21 @@ export const Projects: React.FC = () => {
               </div>
             </div>
 
-            <div className="relative h-[360px] sm:h-[480px] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#111111] transition-all duration-500 group-hover:border-[#67B7FF]/60 group-hover:shadow-[0_0_60px_rgba(103,201,107,0.18)]">
+            {/* Uncropped Research Architecture Diagram Container */}
+            <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#080C14] transition-all duration-500 group-hover:border-[#67B7FF]/60 group-hover:shadow-[0_0_60px_rgba(103,183,255,0.22)] p-2">
               <Image
                 src={projectsData[2].image}
                 alt={projectsData[2].title}
                 fill
-                className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]"
+                priority
+                className="object-contain transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.03]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-70" />
-              <div className="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-[#080808]/90 backdrop-blur-md p-6 rounded-xl border border-white/12">
-                <p className="text-xs md:text-sm text-[#8A8A8A] max-w-xl leading-relaxed">
-                  {projectsData[2].highlight}
+              <div className="absolute bottom-4 left-4 right-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-[#080808]/90 backdrop-blur-md p-5 rounded-xl border border-white/12">
+                <p className="text-xs md:text-sm text-[#8A8A8A] max-w-2xl leading-relaxed">
+                  <strong className="text-[#F5F5F5]">EPICS Phase-II Research:</strong> Multi-architecture benchmarking (InceptionV3 + Attention vs VGG16 + MTCNN vs CNN vs LSTM).
                 </p>
                 <div className="flex items-center gap-2 font-mono text-xs text-[#67B7FF] font-bold tracking-[0.15em] shrink-0">
-                  <span>VIEW DETAILS</span>
+                  <span>EXPLORE RESEARCH CASE</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
               </div>
