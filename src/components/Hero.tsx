@@ -196,12 +196,12 @@ export const Hero: React.FC = () => {
             onMouseLeave={resetCursorState}
             className="group cursor-pointer rounded-2xl overflow-hidden border border-white/15 bg-[#111111] shadow-xl transition-all hover:border-[#67B7FF]/50"
           >
-            <div className="relative h-40 w-full overflow-hidden">
+            <div className="relative h-40 w-full overflow-hidden bg-[#090D16] p-1">
               <Image
                 src="/images/voxa_preview.png"
                 alt="VOXA Platform Teaser"
                 fill
-                className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]"
+                className="object-contain transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]"
               />
             </div>
             <div className="p-3 font-mono text-[11px] text-[#8A8A8A] flex justify-between bg-[#111111] border-t border-white/10 group-hover:text-[#F5F5F5] transition-colors">
