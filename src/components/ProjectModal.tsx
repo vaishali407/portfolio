@@ -38,13 +38,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         <button
           onClick={onClose}
           aria-label="Close project details"
-          className="absolute top-6 right-6 p-2 rounded-full border border-white/20 bg-white/5 hover:border-[#67C96B] hover:text-[#67C96B] transition-colors"
+          className="absolute top-6 right-6 p-2 rounded-full border border-white/20 bg-white/5 hover:border-[#67B7FF] hover:text-[#67B7FF] transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Header Metadata */}
-        <div className="flex items-center gap-3 font-mono text-xs text-[#67C96B] uppercase tracking-widest mb-3">
+        <div className="flex items-center gap-3 font-mono text-xs text-[#67B7FF] uppercase tracking-widest mb-3">
           <span>PROJECT CASE STUDY</span>
           <span>•</span>
           <span>{project.category}</span>
@@ -79,10 +79,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
 
           {/* Highlight Badge */}
-          <div className="rounded-xl border border-[#67C96B]/30 bg-[#183D20]/40 p-5 flex items-start gap-3">
-            <CheckCircle2 className="w-5 h-5 text-[#67C96B] shrink-0 mt-0.5" />
+          <div className="rounded-xl border border-[#67B7FF]/30 bg-[#182F48]/40 p-5 flex items-start gap-3">
+            <CheckCircle2 className="w-5 h-5 text-[#67B7FF] shrink-0 mt-0.5" />
             <div>
-              <h4 className="font-mono text-xs text-[#67C96B] uppercase font-bold mb-1">
+              <h4 className="font-mono text-xs text-[#67B7FF] uppercase font-bold mb-1">
                 KEY TECHNICAL HIGHLIGHT
               </h4>
               <p className="text-sm text-[#F5F5F5]">{project.highlight}</p>
@@ -100,7 +100,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   key={idx}
                   className="flex items-center gap-2 font-mono text-xs text-[#8A8A8A] border border-white/10 rounded-lg p-3 bg-white/5"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#67C96B]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#67B7FF]" />
                   <span>{feat}</span>
                 </li>
               ))}
@@ -132,7 +132,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 font-mono text-xs text-[#F5F5F5] hover:border-[#67C96B] hover:text-[#67C96B] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 font-mono text-xs text-[#F5F5F5] hover:border-[#67B7FF] hover:text-[#67B7FF] transition-colors"
                 >
                   <GithubIcon className="w-4 h-4" />
                   <span>VIEW REPOSITORY</span>
@@ -143,7 +143,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#67C96B] px-5 py-2.5 font-mono text-xs font-bold text-[#080808] hover:bg-[#82E286] transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#67B7FF] px-5 py-2.5 font-mono text-xs font-bold text-[#080808] hover:bg-[#8CC8FF] transition-colors"
                 >
                   <span>LIVE DEMO</span>
                   <ArrowUpRight className="w-4 h-4" />

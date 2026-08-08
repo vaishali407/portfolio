@@ -140,9 +140,9 @@ export const TypewriterIntro: React.FC<TypewriterIntroProps> = ({ onComplete }) 
 
     return (
       <span>
-        {hasOpening && <span className="text-[#67C96B] font-bold">{'{'}</span>}
+        {hasOpening && <span className="text-[#67B7FF] font-bold">{'{'}</span>}
         {core}
-        {hasClosing && <span className="text-[#67C96B] font-bold">{'}'}</span>}
+        {hasClosing && <span className="text-[#67B7FF] font-bold">{'}'}</span>}
       </span>
     );
   };
@@ -158,14 +158,14 @@ export const TypewriterIntro: React.FC<TypewriterIntroProps> = ({ onComplete }) 
 
         {/* Blinking Caret */}
         <span
-          className={`inline-block w-2.5 h-7 md:h-9 ml-2 bg-[#67C96B] rounded-sm transition-opacity duration-100 ${
+          className={`inline-block w-2.5 h-7 md:h-9 ml-2 bg-[#67B7FF] rounded-sm transition-opacity duration-100 ${
             caretVisible ? "opacity-100" : "opacity-0"
           }`}
         />
       </div>
 
       {/* Subtle Skip Indicator */}
-      <span className="absolute bottom-8 font-mono text-[11px] tracking-[0.2em] text-[#777777] uppercase hover:text-[#67C96B] transition-colors">
+      <span className="absolute bottom-8 font-mono text-[11px] tracking-[0.2em] text-[#777777] uppercase hover:text-[#67B7FF] transition-colors">
         CLICK ANYWHERE TO SKIP
       </span>
     </div>

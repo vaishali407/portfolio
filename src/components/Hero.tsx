@@ -96,7 +96,7 @@ export const Hero: React.FC = () => {
           <h2 className="text-[clamp(1.8rem,3.2vw,3.5rem)] font-bold tracking-tight text-[#F5F5F5] uppercase">
             VAISHALI NEGI
           </h2>
-          <span className="font-mono text-xs tracking-[0.18em] text-[#67C96B] font-semibold uppercase">
+          <span className="font-mono text-xs tracking-[0.18em] text-[#67B7FF] font-semibold uppercase">
             FULL-STACK DEVELOPER & AI ENGINEER
           </span>
         </div>
@@ -136,7 +136,7 @@ export const Hero: React.FC = () => {
               href="#work"
               onMouseEnter={() => setCursorState("button")}
               onMouseLeave={resetCursorState}
-              className="group inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-8 py-3.5 font-mono text-xs md:text-sm tracking-[0.15em] text-[#F5F5F5] font-semibold uppercase transition-all hover:border-[#67C96B] hover:bg-[#67C96B]/10 hover:text-[#67C96B] hover:shadow-[0_0_25px_rgba(103,201,107,0.25)]"
+              className="group inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-8 py-3.5 font-mono text-xs md:text-sm tracking-[0.15em] text-[#F5F5F5] font-semibold uppercase transition-all hover:border-[#67B7FF] hover:bg-[#67B7FF]/10 hover:text-[#67B7FF] hover:shadow-[0_0_25px_rgba(103,201,107,0.25)]"
             >
               <span>VIEW WORK</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -153,7 +153,7 @@ export const Hero: React.FC = () => {
               rel="noopener noreferrer"
               onMouseEnter={() => setCursorState("link")}
               onMouseLeave={resetCursorState}
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-mono text-xs text-[#8A8A8A] transition-all hover:border-[#67C96B] hover:text-[#67C96B]"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-mono text-xs text-[#8A8A8A] transition-all hover:border-[#67B7FF] hover:text-[#67B7FF]"
             >
               <GithubIcon className="w-3.5 h-3.5" />
               <span>GITHUB</span>
@@ -165,7 +165,7 @@ export const Hero: React.FC = () => {
               rel="noopener noreferrer"
               onMouseEnter={() => setCursorState("link")}
               onMouseLeave={resetCursorState}
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-mono text-xs text-[#8A8A8A] transition-all hover:border-[#67C96B] hover:text-[#67C96B]"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-mono text-xs text-[#8A8A8A] transition-all hover:border-[#67B7FF] hover:text-[#67B7FF]"
             >
               <LinkedinIcon className="w-3.5 h-3.5" />
               <span>LINKEDIN</span>
@@ -175,7 +175,7 @@ export const Hero: React.FC = () => {
               href="mailto:vaishalinegi407@gmail.com"
               onMouseEnter={() => setCursorState("link")}
               onMouseLeave={resetCursorState}
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-mono text-xs text-[#8A8A8A] transition-all hover:border-[#67C96B] hover:text-[#67C96B]"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-mono text-xs text-[#8A8A8A] transition-all hover:border-[#67B7FF] hover:text-[#67B7FF]"
             >
               <Mail className="w-3.5 h-3.5" />
               <span>EMAIL</span>
@@ -194,7 +194,7 @@ export const Hero: React.FC = () => {
             ref={imgLeftRef}
             onMouseEnter={() => setCursorState("project", "VIEW")}
             onMouseLeave={resetCursorState}
-            className="group cursor-pointer rounded-2xl overflow-hidden border border-white/15 bg-[#111111] shadow-xl transition-all hover:border-[#67C96B]/50"
+            className="group cursor-pointer rounded-2xl overflow-hidden border border-white/15 bg-[#111111] shadow-xl transition-all hover:border-[#67B7FF]/50"
           >
             <div className="relative h-40 w-full overflow-hidden">
               <Image
@@ -206,7 +206,7 @@ export const Hero: React.FC = () => {
             </div>
             <div className="p-3 font-mono text-[11px] text-[#8A8A8A] flex justify-between bg-[#111111] border-t border-white/10 group-hover:text-[#F5F5F5] transition-colors">
               <span>VOXA — MULTILINGUAL CHAT</span>
-              <span className="text-[#67C96B] font-bold">01</span>
+              <span className="text-[#67B7FF] font-bold">01</span>
             </div>
           </a>
 
@@ -215,7 +215,7 @@ export const Hero: React.FC = () => {
             ref={imgRightRef}
             onMouseEnter={() => setCursorState("project", "VIEW")}
             onMouseLeave={resetCursorState}
-            className="group cursor-pointer rounded-2xl overflow-hidden border border-white/15 bg-[#111111] shadow-xl transition-all hover:border-[#67C96B]/50"
+            className="group cursor-pointer rounded-2xl overflow-hidden border border-white/15 bg-[#111111] shadow-xl transition-all hover:border-[#67B7FF]/50"
           >
             <div className="relative h-40 w-full overflow-hidden">
               <Image
@@ -227,7 +227,7 @@ export const Hero: React.FC = () => {
             </div>
             <div className="p-3 font-mono text-[11px] text-[#8A8A8A] flex justify-between bg-[#111111] border-t border-white/10 group-hover:text-[#F5F5F5] transition-colors">
               <span>SMART MEETING ASSISTANT</span>
-              <span className="text-[#67C96B] font-bold">02</span>
+              <span className="text-[#67B7FF] font-bold">02</span>
             </div>
           </a>
         </div>

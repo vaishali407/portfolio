@@ -6,6 +6,7 @@ import { useCursor } from "@/context/CursorContext";
 const PRIMARY_SYMBOLS = ["+", "-", "=", "{", "}", "[", "]", "(", ")", ";", ":", "*", "/"];
 const SECONDARY_SYMBOLS = ["<", ">", "_", "~", "&", "|"];
 const RARE_SYMBOLS = ["</>", "<>", "&&", "||", "01"];
+const accentColors = ["#67B7FF", "#8CC8FF", "#67B7FF", "#D8B98A", "#F5F5F5"];
 
 interface Particle {
   x: number;
@@ -76,14 +77,14 @@ export const BlobCursor: React.FC = () => {
       const rand = Math.random();
       if (isHover) {
         // Higher probability of green on hover
-        if (rand < 0.65) return "#67C96B";
+        if (rand < 0.65) return "#67B7FF";
         if (rand < 0.85) return "#EBE0C8";
         return "#8A8A8A";
       } else {
         // Muted gray / cream default
         if (rand < 0.55) return "#EBE0C8"; // Cream / off-white
         if (rand < 0.85) return "#8A8A8A"; // Muted gray
-        return "#67C96B"; // Accent green
+        return "#67B7FF"; // Accent Sky Blue
       }
     };
 
@@ -136,8 +137,8 @@ export const BlobCursor: React.FC = () => {
         ctx.save();
         ctx.beginPath();
         ctx.arc(currentX, currentY, 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = cursorTypeRef.current !== "default" ? "#67C96B" : "#EBE0C8";
-        ctx.shadowColor = "rgba(103, 201, 107, 0.4)";
+        ctx.fillStyle = cursorTypeRef.current !== "default" ? "#67B7FF" : "#EBE0C8";
+        ctx.shadowColor = "rgba(103, 183, 255, 0.4)";
         ctx.shadowBlur = 6;
         ctx.fill();
         ctx.restore();

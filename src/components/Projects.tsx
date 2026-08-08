@@ -86,7 +86,7 @@ export const Projects: React.FC = () => {
         {/* Section Label */}
         <div className="flex items-center justify-between border-b border-white/10 pb-8 mb-20">
           <div className="flex items-center gap-4 font-mono text-xs text-[#777777] uppercase tracking-[0.15em]">
-            <span className="text-[#67C96B]">02</span>
+            <span className="text-[#67B7FF]">02</span>
             <span>—</span>
             <span>SELECTED WORK</span>
           </div>
@@ -116,7 +116,7 @@ export const Projects: React.FC = () => {
             className="group cursor-pointer grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
           >
             <div className="lg:col-span-8 relative">
-              <div className="relative h-[340px] sm:h-[440px] lg:h-[520px] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#111111] transition-all duration-500 group-hover:border-[#67C96B]/60 group-hover:shadow-[0_0_60px_rgba(103,201,107,0.18)]">
+              <div className="relative h-[340px] sm:h-[440px] lg:h-[520px] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#111111] transition-all duration-500 group-hover:border-[#67B7FF]/60 group-hover:shadow-[0_0_60px_rgba(103,201,107,0.18)]">
                 <Image
                   src={projectsData[0].image}
                   alt={projectsData[0].title}
@@ -128,10 +128,10 @@ export const Projects: React.FC = () => {
             </div>
 
             <div className="lg:col-span-4 lg:-ml-14 lg:z-10 bg-[#080808]/95 backdrop-blur-md p-7 md:p-9 rounded-2xl border border-white/12 space-y-4 transition-transform group-hover:-translate-y-1">
-              <div className="font-mono text-xs text-[#67C96B] tracking-[0.15em] uppercase font-bold">
+              <div className="font-mono text-xs text-[#67B7FF] tracking-[0.15em] uppercase font-bold">
                 01 / {projectsData[0].category}
               </div>
-              <h3 className="text-3xl font-bold tracking-tight text-[#F5F5F5] group-hover:text-[#67C96B] transition-colors">
+              <h3 className="text-3xl font-bold tracking-tight text-[#F5F5F5] group-hover:text-[#67B7FF] transition-colors">
                 {projectsData[0].title}
               </h3>
               <p className="text-sm md:text-base text-[#8A8A8A] leading-relaxed">
@@ -144,7 +144,7 @@ export const Projects: React.FC = () => {
                   </span>
                 ))}
               </div>
-              <div className="pt-4 flex items-center gap-2 font-mono text-xs text-[#67C96B] font-bold tracking-[0.15em] group-hover:underline">
+              <div className="pt-4 flex items-center gap-2 font-mono text-xs text-[#67B7FF] font-bold tracking-[0.15em] group-hover:underline">
                 <span>EXPLORE CASE STUDY</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </div>
@@ -159,10 +159,10 @@ export const Projects: React.FC = () => {
             className="group cursor-pointer grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
           >
             <div className="lg:col-span-4 lg:z-10 bg-[#080808]/95 backdrop-blur-md p-7 md:p-9 rounded-2xl border border-white/12 space-y-4 lg:-mr-14 order-2 lg:order-1 transition-transform group-hover:-translate-y-1">
-              <div className="font-mono text-xs text-[#67C96B] tracking-[0.15em] uppercase font-bold">
+              <div className="font-mono text-xs text-[#67B7FF] tracking-[0.15em] uppercase font-bold">
                 02 / {projectsData[1].category}
               </div>
-              <h3 className="text-3xl font-bold tracking-tight text-[#F5F5F5] group-hover:text-[#67C96B] transition-colors">
+              <h3 className="text-3xl font-bold tracking-tight text-[#F5F5F5] group-hover:text-[#67B7FF] transition-colors">
                 {projectsData[1].title}
               </h3>
               <p className="text-sm md:text-base text-[#8A8A8A] leading-relaxed">
@@ -175,14 +175,14 @@ export const Projects: React.FC = () => {
                   </span>
                 ))}
               </div>
-              <div className="pt-4 flex items-center gap-2 font-mono text-xs text-[#67C96B] font-bold tracking-[0.15em] group-hover:underline">
+              <div className="pt-4 flex items-center gap-2 font-mono text-xs text-[#67B7FF] font-bold tracking-[0.15em] group-hover:underline">
                 <span>EXPLORE CASE STUDY</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </div>
             </div>
 
             <div className="lg:col-span-8 order-1 lg:order-2">
-              <div className="relative h-[340px] sm:h-[440px] lg:h-[500px] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#111111] transition-all duration-500 group-hover:border-[#67C96B]/60 group-hover:shadow-[0_0_60px_rgba(103,201,107,0.18)]">
+              <div className="relative h-[340px] sm:h-[440px] lg:h-[500px] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#111111] transition-all duration-500 group-hover:border-[#67B7FF]/60 group-hover:shadow-[0_0_60px_rgba(103,201,107,0.18)]">
                 <Image
                   src={projectsData[1].image}
                   alt={projectsData[1].title}
@@ -203,10 +203,10 @@ export const Projects: React.FC = () => {
           >
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-4">
               <div>
-                <span className="font-mono text-xs text-[#67C96B] tracking-[0.15em] uppercase font-bold">
+                <span className="font-mono text-xs text-[#67B7FF] tracking-[0.15em] uppercase font-bold">
                   03 / {projectsData[2].category}
                 </span>
-                <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-[#F5F5F5] group-hover:text-[#67C96B] transition-colors mt-1">
+                <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-[#F5F5F5] group-hover:text-[#67B7FF] transition-colors mt-1">
                   {projectsData[2].title}
                 </h3>
               </div>
@@ -215,7 +215,7 @@ export const Projects: React.FC = () => {
               </div>
             </div>
 
-            <div className="relative h-[360px] sm:h-[480px] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#111111] transition-all duration-500 group-hover:border-[#67C96B]/60 group-hover:shadow-[0_0_60px_rgba(103,201,107,0.18)]">
+            <div className="relative h-[360px] sm:h-[480px] w-full rounded-2xl overflow-hidden border border-white/15 bg-[#111111] transition-all duration-500 group-hover:border-[#67B7FF]/60 group-hover:shadow-[0_0_60px_rgba(103,201,107,0.18)]">
               <Image
                 src={projectsData[2].image}
                 alt={projectsData[2].title}
@@ -227,7 +227,7 @@ export const Projects: React.FC = () => {
                 <p className="text-xs md:text-sm text-[#8A8A8A] max-w-xl leading-relaxed">
                   {projectsData[2].highlight}
                 </p>
-                <div className="flex items-center gap-2 font-mono text-xs text-[#67C96B] font-bold tracking-[0.15em] shrink-0">
+                <div className="flex items-center gap-2 font-mono text-xs text-[#67B7FF] font-bold tracking-[0.15em] shrink-0">
                   <span>VIEW DETAILS</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </div>

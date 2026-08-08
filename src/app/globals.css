@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #080808;
+  --bg-primary: #050505;
   --bg-surface: #111111;
   --text-primary: #F5F5F5;
   --text-secondary: #8A8A8A;
   --text-muted: #777777;
   --border-color: rgba(255, 255, 255, 0.12);
-  --accent-green: #67C96B;
-  --accent-dark: #183D20;
-  --accent-glow: rgba(103, 201, 107, 0.12);
+  --accent-blue: #67B7FF;
+  --accent-dark: #182F48;
+  --accent-glow: rgba(103, 183, 255, 0.12);
 
-  /* Dynamic mouse position CSS variables updated continuously via Lerp ticker */
+  /* Dynamic mouse position CSS variables updated continuously */
   --cursor-x: 50vw;
   --cursor-y: 50vh;
   --cursor-radius: 120px;
@@ -24,7 +24,7 @@
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
   --color-border-subtle: var(--border-color);
-  --color-accent: var(--accent-green);
+  --color-accent: var(--accent-blue);
   --color-accent-dark: var(--accent-dark);
   --color-accent-glow: var(--accent-glow);
   
@@ -113,10 +113,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  color: #67C96B;
+  color: #67B7FF;
   z-index: 2;
   pointer-events: none;
-  text-shadow: 0 0 12px rgba(103, 201, 107, 0.3);
+  text-shadow: 0 0 12px rgba(103, 183, 255, 0.3);
   /* Localized radial feather mask centered on cream cursor lens position */
   mask-image: radial-gradient(
     circle var(--cursor-radius) at var(--cursor-x) var(--cursor-y),
@@ -133,9 +133,9 @@ body {
   transition: opacity 0.15s ease;
 }
 
-/* Reverse Color Swap: Green base text reveals White text inside cream lens */
+/* Reverse Color Swap: Sky Blue base text reveals White text inside cream lens */
 .masked-text-base-green {
-  color: #67C96B;
+  color: #67B7FF;
   position: relative;
   z-index: 1;
 }
@@ -199,5 +199,5 @@ html.lenis, html.lenis body {
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-green);
+  background: #67B7FF;
 }

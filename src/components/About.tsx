@@ -7,10 +7,10 @@ export const About: React.FC = () => {
   const { setCursorState, resetCursorState } = useCursor();
 
   const highlightWords = [
-    { word: "FULL-STACK", color: "#67C96B" },
-    { word: "AI-POWERED", color: "#82E286" },
-    { word: "REAL-TIME", color: "#67C96B" },
-    { word: "DESIGN-ORIENTED", color: "#82E286" },
+    { word: "FULL-STACK", color: "#67B7FF" },
+    { word: "AI-POWERED", color: "#8CC8FF" },
+    { word: "REAL-TIME", color: "#67B7FF" },
+    { word: "DESIGN-ORIENTED", color: "#8CC8FF" },
   ];
 
   return (
@@ -18,7 +18,7 @@ export const About: React.FC = () => {
       <div className="max-w-[1600px] mx-auto">
         {/* Section Index Header */}
         <div className="flex items-center gap-4 font-mono text-xs text-[#777777] uppercase tracking-[0.15em] mb-12">
-          <span className="text-[#67C96B]">01</span>
+          <span className="text-[#67B7FF]">01</span>
           <span>—</span>
           <span>ABOUT</span>
         </div>
@@ -30,7 +30,7 @@ export const About: React.FC = () => {
           className="mb-16"
         >
           <h2 className="text-section-title font-bold tracking-tighter uppercase leading-[0.9] text-[#F5F5F5] max-w-5xl">
-            A DEVELOPER WHO LIKES TO <span className="text-[#67C96B]">BUILD</span> THINGS.
+            A DEVELOPER WHO LIKES TO <span className="text-[#67B7FF]">BUILD</span> THINGS.
           </h2>
         </div>
 
@@ -50,7 +50,7 @@ export const About: React.FC = () => {
 
               <p>
                 I also contribute to the{" "}
-                <strong className="text-[#67C96B] font-normal">Vitronix Club Design Team</strong>, combining software engineering with digital art direction.
+                <strong className="text-[#67B7FF] font-normal">Vitronix Club Design Team</strong>, combining software engineering with digital art direction.
               </p>
             </div>
 
@@ -61,7 +61,7 @@ export const About: React.FC = () => {
                   key={item.word}
                   onMouseEnter={() => setCursorState("button")}
                   onMouseLeave={resetCursorState}
-                  className="rounded-full border border-white/20 bg-white/5 px-4 py-2 font-mono text-xs text-[#F5F5F5] transition-all hover:border-[#67C96B] hover:text-[#67C96B] hover:bg-[#67C96B]/10"
+                  className="rounded-full border border-white/20 bg-white/5 px-4 py-2 font-mono text-xs text-[#F5F5F5] transition-all hover:border-[#67B7FF] hover:text-[#67B7FF] hover:bg-[#67B7FF]/10"
                 >
                   {item.word}
                 </span>
@@ -73,7 +73,7 @@ export const About: React.FC = () => {
               <div className="rounded-2xl border border-white/12 bg-[#111111] p-7 space-y-4">
                 <div className="flex items-center justify-between border-b border-white/10 pb-3 font-mono text-xs tracking-[0.15em]">
                   <span className="text-[#777777]">DEGREE</span>
-                  <span className="text-[#67C96B] font-bold">2023 — 2027</span>
+                  <span className="text-[#67B7FF] font-bold">2023 — 2027</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#F5F5F5]">
@@ -82,7 +82,7 @@ export const About: React.FC = () => {
                   <p className="text-sm text-[#8A8A8A] mt-1">VIT Bhopal University</p>
                 </div>
                 <div className="flex items-center gap-3 pt-2 font-mono text-xs text-[#8A8A8A]">
-                  <span className="rounded bg-[#183D20] px-3 py-1 text-[#67C96B] font-bold">
+                  <span className="rounded bg-[#182F48] px-3 py-1 text-[#67B7FF] font-bold">
                     CGPA 8.23
                   </span>
                   <span>VIT Bhopal CSE</span>
@@ -92,7 +92,7 @@ export const About: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="rounded-xl border border-white/10 bg-[#111111] p-5 space-y-2">
                   <div className="flex items-center gap-2">
-                    <Code2 className="w-4 h-4 text-[#67C96B]" />
+                    <Code2 className="w-4 h-4 text-[#67B7FF]" />
                     <h4 className="font-mono text-xs text-[#F5F5F5] font-bold tracking-[0.15em]">
                       FULL-STACK
                     </h4>
@@ -104,7 +104,7 @@ export const About: React.FC = () => {
 
                 <div className="rounded-xl border border-white/10 bg-[#111111] p-5 space-y-2">
                   <div className="flex items-center gap-2">
-                    <Cpu className="w-4 h-4 text-[#67C96B]" />
+                    <Cpu className="w-4 h-4 text-[#67B7FF]" />
                     <h4 className="font-mono text-xs text-[#F5F5F5] font-bold tracking-[0.15em]">
                       AI & VISION
                     </h4>
@@ -119,7 +119,7 @@ export const About: React.FC = () => {
 
           {/* Right Column: Editorial Portrait Card */}
           <div className="lg:col-span-5">
-            <div className="group relative rounded-2xl overflow-hidden border border-white/15 bg-[#111111] shadow-2xl transition-all duration-500 hover:border-[#67C96B]/50">
+            <div className="group relative rounded-2xl overflow-hidden border border-white/15 bg-[#111111] shadow-2xl transition-all duration-500 hover:border-[#67B7FF]/50">
               <div className="relative h-[480px] sm:h-[540px] w-full overflow-hidden">
                 <Image
                   src="/images/vaishali_portrait.png"
@@ -132,7 +132,7 @@ export const About: React.FC = () => {
               </div>
               <div className="p-4 font-mono text-[11px] text-[#8A8A8A] flex items-center justify-between bg-[#111111] border-t border-white/10 group-hover:text-[#F5F5F5] transition-colors">
                 <span className="tracking-wider">VAISHALI NEGI</span>
-                <span className="text-[#67C96B] font-bold tracking-widest">PORTRAIT / 01</span>
+                <span className="text-[#67B7FF] font-bold tracking-widest">PORTRAIT / 01</span>
               </div>
             </div>
           </div>

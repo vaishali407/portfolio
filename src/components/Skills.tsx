@@ -41,7 +41,7 @@ export const Skills: React.FC = () => {
       <div className="max-w-[1600px] mx-auto">
         {/* Section Label */}
         <div className="flex items-center gap-4 font-mono text-xs text-[#777777] uppercase tracking-[0.15em] mb-12">
-          <span className="text-[#67C96B]">03</span>
+          <span className="text-[#67B7FF]">03</span>
           <span>—</span>
           <span>TOOLKIT</span>
         </div>
@@ -62,12 +62,12 @@ export const Skills: React.FC = () => {
           {skillCategories.map((cat, idx) => (
             <div
               key={cat.title}
-              className="group border-b border-white/10 pb-8 space-y-4 transition-all hover:border-[#67C96B]/40"
+              className="group border-b border-white/10 pb-8 space-y-4 transition-all hover:border-[#67B7FF]/40"
             >
-              <div className="flex items-center gap-3 font-mono text-xs text-[#67C96B] tracking-[0.18em] uppercase">
+              <div className="flex items-center gap-3 font-mono text-xs text-[#67B7FF] tracking-[0.18em] uppercase">
                 <span>0{idx + 1}</span>
                 <span>/</span>
-                <span className="text-[#777777] group-hover:text-[#67C96B] transition-colors">
+                <span className="text-[#777777] group-hover:text-[#67B7FF] transition-colors">
                   {cat.title}
                 </span>
               </div>
@@ -83,7 +83,7 @@ export const Skills: React.FC = () => {
                       {skill}
                     </span>
                     {sIdx < cat.skills.length - 1 && (
-                      <span className="text-[#67C96B]/40 font-mono text-base select-none">
+                      <span className="text-[#67B7FF]/40 font-mono text-base select-none">
                         ·
                       </span>
                     )}

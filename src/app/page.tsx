@@ -18,7 +18,7 @@ export default function Home() {
   useSmoothScroll();
 
   return (
-    <main className="relative min-h-screen bg-[#080808] text-[#F5F5F5] selection:bg-[#67C96B] selection:text-[#080808]">
+    <main className="relative min-h-screen bg-[#080808] text-[#F5F5F5] selection:bg-[#67B7FF] selection:text-[#080808]">
       {!introFinished && (
         <TypewriterIntro onComplete={() => setIntroFinished(true)} />
       )}

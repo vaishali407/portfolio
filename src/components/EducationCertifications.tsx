@@ -44,7 +44,7 @@ export const EducationCertifications: React.FC = () => {
           {/* Left Column: Education */}
           <div className="lg:col-span-6 space-y-8">
             <div className="flex items-center gap-4 font-mono text-xs text-[#777777] uppercase tracking-[0.15em]">
-              <span className="text-[#67C96B]">05</span>
+              <span className="text-[#67B7FF]">05</span>
               <span>—</span>
               <span>ACADEMICS</span>
             </div>
@@ -56,10 +56,10 @@ export const EducationCertifications: React.FC = () => {
             <div
               onMouseEnter={() => setCursorState("button")}
               onMouseLeave={resetCursorState}
-              className="rounded-2xl border border-white/12 bg-[#111111] p-8 space-y-4 transition-all hover:border-[#67C96B]/50"
+              className="rounded-2xl border border-white/12 bg-[#111111] p-8 space-y-4 transition-all hover:border-[#67B7FF]/50"
             >
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <div className="flex items-center gap-2 font-mono text-xs text-[#67C96B] tracking-[0.15em] font-bold">
+                <div className="flex items-center gap-2 font-mono text-xs text-[#67B7FF] tracking-[0.15em] font-bold">
                   <GraduationCap className="w-4 h-4" />
                   <span>VIT BHOPAL UNIVERSITY</span>
                 </div>
@@ -74,7 +74,7 @@ export const EducationCertifications: React.FC = () => {
               </div>
 
               <div className="pt-2 flex items-center gap-4">
-                <span className="rounded-md bg-[#183D20] px-3 py-1 font-mono text-xs font-bold text-[#67C96B]">
+                <span className="rounded-md bg-[#182F48] px-3 py-1 font-mono text-xs font-bold text-[#67B7FF]">
                   CGPA 8.23
                 </span>
                 <span className="font-mono text-xs text-[#777777]">Full-Time Program</span>
@@ -85,7 +85,7 @@ export const EducationCertifications: React.FC = () => {
           {/* Right Column: Leadership & Design */}
           <div className="lg:col-span-6 space-y-8">
             <div className="flex items-center gap-4 font-mono text-xs text-[#777777] uppercase tracking-[0.15em]">
-              <span className="text-[#67C96B]">06</span>
+              <span className="text-[#67B7FF]">06</span>
               <span>—</span>
               <span>LEADERSHIP & DESIGN</span>
             </div>
@@ -97,10 +97,10 @@ export const EducationCertifications: React.FC = () => {
             <div
               onMouseEnter={() => setCursorState("button")}
               onMouseLeave={resetCursorState}
-              className="rounded-2xl border border-white/12 bg-[#111111] p-8 space-y-4 transition-all hover:border-[#67C96B]/50"
+              className="rounded-2xl border border-white/12 bg-[#111111] p-8 space-y-4 transition-all hover:border-[#67B7FF]/50"
             >
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <div className="flex items-center gap-2 font-mono text-xs text-[#67C96B] tracking-[0.15em] font-bold">
+                <div className="flex items-center gap-2 font-mono text-xs text-[#67B7FF] tracking-[0.15em] font-bold">
                   <Palette className="w-4 h-4" />
                   <span>VITRONIX CLUB</span>
                 </div>
@@ -132,7 +132,7 @@ export const EducationCertifications: React.FC = () => {
         {/* Certifications Editorial List */}
         <div className="space-y-10 border-t border-white/10 pt-20">
           <div className="flex items-center gap-4 font-mono text-xs text-[#777777] uppercase tracking-[0.15em]">
-            <span className="text-[#67C96B]">05</span>
+            <span className="text-[#67B7FF]">05</span>
             <span>—</span>
             <span>CREDENTIALS</span>
           </div>
@@ -150,9 +150,9 @@ export const EducationCertifications: React.FC = () => {
                 className="group flex flex-col md:flex-row md:items-center justify-between py-7 md:py-8 px-4 transition-all hover:bg-white/[0.03] rounded-lg"
               >
                 <div className="flex items-center gap-4">
-                  <Award className="w-5 h-5 text-[#67C96B] shrink-0" />
+                  <Award className="w-5 h-5 text-[#67B7FF] shrink-0" />
                   <div>
-                    <h4 className="text-lg md:text-xl font-semibold text-[#F5F5F5] group-hover:text-[#67C96B] transition-colors">
+                    <h4 className="text-lg md:text-xl font-semibold text-[#F5F5F5] group-hover:text-[#67B7FF] transition-colors">
                       {cert.title}
                     </h4>
                     <p className="text-xs md:text-sm text-[#777777] font-mono mt-1">{cert.issuer}</p>

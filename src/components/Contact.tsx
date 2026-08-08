@@ -24,7 +24,7 @@ export const Contact: React.FC = () => {
       <div className="max-w-[1600px] mx-auto space-y-20">
         {/* Section Label */}
         <div className="flex items-center gap-4 font-mono text-xs text-[#777777] uppercase tracking-[0.15em]">
-          <span className="text-[#67C96B]">06</span>
+          <span className="text-[#67B7FF]">06</span>
           <span>—</span>
           <span>CONTACT</span>
         </div>
@@ -38,7 +38,7 @@ export const Contact: React.FC = () => {
           <h2 className="text-[clamp(3.8rem,9vw,10rem)] font-bold tracking-tighter uppercase leading-[0.88] text-[#F5F5F5]">
             LET&apos;S BUILD
           </h2>
-          <h2 className="text-[clamp(3.8rem,9vw,10rem)] font-bold tracking-tighter uppercase leading-[0.88] text-[#67C96B]">
+          <h2 className="text-[clamp(3.8rem,9vw,10rem)] font-bold tracking-tighter uppercase leading-[0.88] text-[#67B7FF]">
             SOMETHING.
           </h2>
         </div>
@@ -55,7 +55,7 @@ export const Contact: React.FC = () => {
                 href={`mailto:${email}`}
                 onMouseEnter={() => setCursorState("button")}
                 onMouseLeave={resetCursorState}
-                className="font-mono text-lg md:text-xl text-[#F5F5F5] hover:text-[#67C96B] transition-colors underline underline-offset-4"
+                className="font-mono text-lg md:text-xl text-[#F5F5F5] hover:text-[#67B7FF] transition-colors underline underline-offset-4"
               >
                 {email}
               </a>
@@ -64,14 +64,14 @@ export const Contact: React.FC = () => {
                 onClick={handleCopyEmail}
                 onMouseEnter={() => setCursorState("button")}
                 onMouseLeave={resetCursorState}
-                className="rounded-full border border-white/20 bg-white/5 p-2.5 text-[#8A8A8A] hover:border-[#67C96B] hover:text-[#67C96B] transition-colors"
+                className="rounded-full border border-white/20 bg-white/5 p-2.5 text-[#8A8A8A] hover:border-[#67B7FF] hover:text-[#67B7FF] transition-colors"
                 title="Copy email address"
               >
-                {copied ? <Check className="w-4 h-4 text-[#67C96B]" /> : <Copy className="w-4 h-4" />}
+                {copied ? <Check className="w-4 h-4 text-[#67B7FF]" /> : <Copy className="w-4 h-4" />}
               </button>
 
               {copied && (
-                <span className="font-mono text-xs text-[#67C96B] animate-fade-in">
+                <span className="font-mono text-xs text-[#67B7FF] animate-fade-in">
                   COPIED TO CLIPBOARD!
                 </span>
               )}
@@ -85,13 +85,13 @@ export const Contact: React.FC = () => {
               href={`mailto:${email}`}
               onMouseEnter={() => setCursorState("button")}
               onMouseLeave={resetCursorState}
-              className="group relative inline-flex h-36 w-36 md:h-44 md:w-44 items-center justify-center rounded-full border border-[#67C96B] bg-[#183D20]/40 text-center transition-all duration-300 hover:bg-[#67C96B] hover:shadow-[0_0_50px_rgba(103,201,107,0.4)]"
+              className="group relative inline-flex h-36 w-36 md:h-44 md:w-44 items-center justify-center rounded-full border border-[#67B7FF] bg-[#182F48]/40 text-center transition-all duration-300 hover:bg-[#67B7FF] hover:shadow-[0_0_50px_rgba(103,183,255,0.4)]"
             >
               <div className="flex flex-col items-center gap-2">
-                <span className="font-mono text-xs tracking-widest text-[#67C96B] uppercase font-bold group-hover:text-[#080808] transition-colors">
+                <span className="font-mono text-xs tracking-widest text-[#67B7FF] uppercase font-bold group-hover:text-[#080808] transition-colors">
                   GET IN TOUCH
                 </span>
-                <ArrowUpRight className="w-5 h-5 text-[#67C96B] group-hover:text-[#080808] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                <ArrowUpRight className="w-5 h-5 text-[#67B7FF] group-hover:text-[#080808] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </div>
             </a>
           </div>
@@ -106,7 +106,7 @@ export const Contact: React.FC = () => {
               rel="noopener noreferrer"
               onMouseEnter={() => setCursorState("link")}
               onMouseLeave={resetCursorState}
-              className="flex items-center gap-1.5 hover:text-[#67C96B] transition-colors"
+              className="flex items-center gap-1.5 hover:text-[#67B7FF] transition-colors"
             >
               <GithubIcon className="w-4 h-4" />
               <span>GITHUB</span>
@@ -119,7 +119,7 @@ export const Contact: React.FC = () => {
               rel="noopener noreferrer"
               onMouseEnter={() => setCursorState("link")}
               onMouseLeave={resetCursorState}
-              className="flex items-center gap-1.5 hover:text-[#67C96B] transition-colors"
+              className="flex items-center gap-1.5 hover:text-[#67B7FF] transition-colors"
             >
               <LinkedinIcon className="w-4 h-4" />
               <span>LINKEDIN</span>
@@ -130,7 +130,7 @@ export const Contact: React.FC = () => {
               href={`mailto:${email}`}
               onMouseEnter={() => setCursorState("link")}
               onMouseLeave={resetCursorState}
-              className="flex items-center gap-1.5 hover:text-[#67C96B] transition-colors"
+              className="flex items-center gap-1.5 hover:text-[#67B7FF] transition-colors"
             >
               <Mail className="w-4 h-4" />
               <span>EMAIL</span>

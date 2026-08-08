@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
             onMouseLeave={resetCursorState}
             className="group flex flex-col font-mono text-xs tracking-widest text-[#F5F5F5] uppercase transition-opacity hover:opacity-80"
           >
-            <span className="font-bold text-sm tracking-[0.15em] text-[#F5F5F5] group-hover:text-[#67C96B] transition-colors">
+            <span className="font-bold text-sm tracking-[0.15em] text-[#F5F5F5] group-hover:text-[#67B7FF] transition-colors">
               VAISHALI NEGI
             </span>
             <span className="text-[11px] text-[#777777] font-normal tracking-wider group-hover:text-[#8A8A8A] transition-colors">
@@ -63,7 +63,7 @@ export const Navbar: React.FC = () => {
                 href={link.href}
                 onMouseEnter={() => setCursorState("link")}
                 onMouseLeave={resetCursorState}
-                className="font-mono text-xs md:text-sm tracking-[0.15em] text-[#8A8A8A] transition-colors hover:text-[#67C96B]"
+                className="font-mono text-xs md:text-sm tracking-[0.15em] text-[#8A8A8A] transition-colors hover:text-[#67B7FF]"
               >
                 {link.label}
               </a>
@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
               rel="noopener noreferrer"
               onMouseEnter={() => setCursorState("button")}
               onMouseLeave={resetCursorState}
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-2.5 font-mono text-xs tracking-[0.15em] text-[#F5F5F5] transition-all hover:border-[#67C96B] hover:bg-[#67C96B]/10 hover:text-[#67C96B]"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-2.5 font-mono text-xs tracking-[0.15em] text-[#F5F5F5] transition-all hover:border-[#67B7FF] hover:bg-[#67B7FF]/10 hover:text-[#67B7FF]"
             >
               <span>RESUME</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -90,7 +90,7 @@ export const Navbar: React.FC = () => {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
-            className="md:hidden p-2 text-[#F5F5F5] hover:text-[#67C96B] focus:outline-none"
+            className="md:hidden p-2 text-[#F5F5F5] hover:text-[#67B7FF] focus:outline-none"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -106,7 +106,7 @@ export const Navbar: React.FC = () => {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-[#8A8A8A] hover:text-[#67C96B] transition-colors flex items-center justify-between border-b border-white/10 pb-4"
+                className="text-[#8A8A8A] hover:text-[#67B7FF] transition-colors flex items-center justify-between border-b border-white/10 pb-4"
               >
                 <span>{link.label}</span>
                 <span className="text-xs text-[#777777]">0{idx + 1}</span>
@@ -117,7 +117,7 @@ export const Navbar: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-[#67C96B] bg-[#67C96B]/10 px-6 py-4 font-mono text-sm tracking-widest text-[#67C96B]"
+              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-[#67B7FF] bg-[#67B7FF]/10 px-6 py-4 font-mono text-sm tracking-widest text-[#67B7FF]"
             >
               <span>DOWNLOAD RESUME</span>
               <ArrowUpRight className="w-4 h-4" />

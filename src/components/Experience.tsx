@@ -12,7 +12,7 @@ export const Experience: React.FC = () => {
       <div className="max-w-[1600px] mx-auto">
         {/* Section Label */}
         <div className="flex items-center gap-4 font-mono text-xs text-[#777777] uppercase tracking-[0.15em] mb-12">
-          <span className="text-[#67C96B]">04</span>
+          <span className="text-[#67B7FF]">04</span>
           <span>—</span>
           <span>EXPERIENCE</span>
         </div>
@@ -33,22 +33,22 @@ export const Experience: React.FC = () => {
           <div
             onMouseEnter={() => setCursorState("button")}
             onMouseLeave={resetCursorState}
-            className="group rounded-2xl border border-white/12 bg-[#111111] p-8 md:p-10 transition-all hover:border-[#67C96B]/50 hover:shadow-[0_0_40px_rgba(103,201,107,0.1)]"
+            className="group rounded-2xl border border-white/12 bg-[#111111] p-8 md:p-10 transition-all hover:border-[#67B7FF]/50 hover:shadow-[0_0_40px_rgba(103,201,107,0.1)]"
           >
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6 mb-6">
               <div>
-                <div className="flex items-center gap-3 font-mono text-xs text-[#67C96B] uppercase font-bold tracking-widest mb-1">
+                <div className="flex items-center gap-3 font-mono text-xs text-[#67B7FF] uppercase font-bold tracking-widest mb-1">
                   <Briefcase className="w-4 h-4" />
                   <span>INTERNPRO</span>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#F5F5F5] group-hover:text-[#67C96B] transition-colors">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#F5F5F5] group-hover:text-[#67B7FF] transition-colors">
                   Web Developer Intern
                 </h3>
               </div>
 
               <div className="flex flex-col md:items-end font-mono text-xs text-[#8A8A8A] space-y-1">
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-3.5 h-3.5 text-[#67C96B]" />
+                  <Calendar className="w-3.5 h-3.5 text-[#67B7FF]" />
                   <span>JUNE 2025 — JULY 2025</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#777777]">
