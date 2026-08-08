@@ -8,6 +8,37 @@ import { ArrowUpRight, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/SocialIcons";
 import gsap from "gsap";
 
+const HeroTextReveal: React.FC<{ text: string; className?: string }> = ({ text, className }) => {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!wrapperRef.current) return;
+    const rect = wrapperRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    wrapperRef.current.style.setProperty("--mouse-x", `${x}px`);
+    wrapperRef.current.style.setProperty("--mouse-y", `${y}px`);
+    wrapperRef.current.style.setProperty("--mouse-opacity", "1");
+  };
+
+  const handleMouseLeave = () => {
+    if (!wrapperRef.current) return;
+    wrapperRef.current.style.setProperty("--mouse-opacity", "0");
+  };
+
+  return (
+    <div
+      ref={wrapperRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="masked-hero-wrapper leading-none relative inline-block w-full select-none cursor-default"
+    >
+      <h1 className={`masked-hero-base ${className}`}>{text}</h1>
+      <h1 className={`masked-hero-cream ${className}`}>{text}</h1>
+    </div>
+  );
+};
+
 export const Hero: React.FC = () => {
   const { setCursorState, resetCursorState } = useCursor();
   const ctaRef = useMagnetic(0.35);
@@ -74,26 +105,18 @@ export const Hero: React.FC = () => {
         <div className="hero-stagger grid grid-cols-1 lg:grid-cols-12 gap-4 items-baseline select-none cursor-default py-4 w-full max-w-full">
           {/* Left Heading: FULL-STACK */}
           <div className="lg:col-span-7 text-left">
-            <div className="masked-hero-wrapper leading-none">
-              <h1 className="masked-hero-base text-[clamp(3.2rem,7.4vw,7.6rem)] font-bold tracking-tight uppercase leading-[0.88]">
-                FULL-STACK
-              </h1>
-              <h1 className="masked-hero-cream text-[clamp(3.2rem,7.4vw,7.6rem)] font-bold tracking-tight uppercase leading-[0.88]">
-                FULL-STACK
-              </h1>
-            </div>
+            <HeroTextReveal
+              text="FULL-STACK"
+              className="text-[clamp(3.2rem,7.4vw,7.6rem)] font-bold tracking-tight uppercase leading-[0.88]"
+            />
           </div>
 
           {/* Right Heading: DEVELOPER */}
           <div className="lg:col-span-5 text-left lg:text-right">
-            <div className="masked-hero-wrapper leading-none">
-              <h1 className="masked-hero-base text-[clamp(3.2rem,7.4vw,7.6rem)] font-bold tracking-tight uppercase leading-[0.88]">
-                DEVELOPER
-              </h1>
-              <h1 className="masked-hero-cream text-[clamp(3.2rem,7.4vw,7.6rem)] font-bold tracking-tight uppercase leading-[0.88]">
-                DEVELOPER
-              </h1>
-            </div>
+            <HeroTextReveal
+              text="DEVELOPER"
+              className="text-[clamp(3.2rem,7.4vw,7.6rem)] font-bold tracking-tight uppercase leading-[0.88]"
+            />
           </div>
         </div>
 

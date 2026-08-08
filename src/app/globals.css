@@ -77,17 +77,17 @@ body {
   color: #D8B98A;
   z-index: 2;
   pointer-events: none;
-  opacity: 1 !important;
+  opacity: var(--mouse-opacity, 0);
   text-shadow: 0 0 16px rgba(216, 185, 138, 0.6);
-  /* Localized radial mask centered on cursor position */
+  /* Localized radial mask centered on local element mouse coordinates */
   mask-image: radial-gradient(
-    circle 65px at var(--cursor-x) var(--cursor-y),
+    circle 55px at var(--mouse-x, -999px) var(--mouse-y, -999px),
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0.85) 60%,
     rgba(0, 0, 0, 0) 100%
   );
   -webkit-mask-image: radial-gradient(
-    circle 65px at var(--cursor-x) var(--cursor-y),
+    circle 55px at var(--mouse-x, -999px) var(--mouse-y, -999px),
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0.85) 60%,
     rgba(0, 0, 0, 0) 100%
