@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #080808;
+  --bg-surface: #111111;
+  --text-primary: #F5F5F5;
+  --text-secondary: #8A8A8A;
+  --text-muted: #777777;
+  --border-color: rgba(255, 255, 255, 0.12);
+  --accent-green: #67C96B;
+  --accent-dark: #183D20;
+  --accent-glow: rgba(103, 201, 107, 0.12);
+
+  /* Dynamic mouse position CSS variables updated continuously via Lerp ticker */
+  --cursor-x: 50vw;
+  --cursor-y: 50vh;
+  --cursor-radius: 120px;
+}
+
+@theme {
+  --color-background: var(--bg-primary);
+  --color-surface: var(--bg-surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-border-subtle: var(--border-color);
+  --color-accent: var(--accent-green);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-glow: var(--accent-glow);
+  
+  --font-geist: var(--font-geist-sans), "Inter", "Manrope", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-geist);
+  scroll-behavior: auto;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Localized Cream Spotlight Reveal for Hero Typography (#F5F5F5 -> #EBE0C8 under cursor) */
+.masked-hero-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.masked-hero-base {
+  color: #F5F5F5;
+  position: relative;
+  z-index: 1;
+}
+
+.masked-hero-cream {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #EBE0C8;
+  z-index: 2;
+  pointer-events: none;
+  text-shadow: 0 0 14px rgba(235, 224, 200, 0.4);
+  /* Localized radial mask centered on cursor position */
+  mask-image: radial-gradient(
+    circle 55px at var(--cursor-x) var(--cursor-y),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle 55px at var(--cursor-x) var(--cursor-y),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transition: opacity 0.2s ease;
+}
+
+/* Dual Layer Masked Typography Interaction — Cream Lens Color Swap (No Scale/Distortion) */
+.masked-text-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.masked-text-base {
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.masked-text-reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #67C96B;
+  z-index: 2;
+  pointer-events: none;
+  text-shadow: 0 0 12px rgba(103, 201, 107, 0.3);
+  /* Localized radial feather mask centered on cream cursor lens position */
+  mask-image: radial-gradient(
+    circle var(--cursor-radius) at var(--cursor-x) var(--cursor-y),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.85) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle var(--cursor-radius) at var(--cursor-x) var(--cursor-y),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.85) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transition: opacity 0.15s ease;
+}
+
+/* Reverse Color Swap: Green base text reveals White text inside cream lens */
+.masked-text-base-green {
+  color: #67C96B;
+  position: relative;
+  z-index: 1;
+}
+
+.masked-text-reveal-white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #F5F5F5;
+  z-index: 2;
+  pointer-events: none;
+  text-shadow: 0 0 12px rgba(245, 245, 245, 0.3);
+  /* Localized radial feather mask centered on cream cursor lens position */
+  mask-image: radial-gradient(
+    circle var(--cursor-radius) at var(--cursor-x) var(--cursor-y),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.85) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle var(--cursor-radius) at var(--cursor-x) var(--cursor-y),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.85) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transition: opacity 0.15s ease;
+}
+
+/* Lenis Smooth Scroll resets */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-green);
+}
