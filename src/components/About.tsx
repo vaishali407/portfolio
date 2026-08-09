@@ -16,30 +16,30 @@ export const About: React.FC = () => {
   return (
     <section id="about" className="py-36 px-6 md:px-12 bg-[#080808] border-t border-white/10">
       <div className="max-w-[1600px] mx-auto">
-        {/* Section Index Header */}
-        <div className="flex items-center gap-4 font-mono text-xs text-[#777777] uppercase tracking-[0.15em] mb-12">
-          <span className="text-[#67B7FF]">01</span>
-          <span>—</span>
-          <span>ABOUT</span>
+        {/* Section Index Header - Large & Prominent Editorial Label */}
+        <div className="flex items-center gap-4 font-mono text-sm md:text-base font-semibold text-[#8A8A8A] uppercase tracking-[0.2em] mb-6">
+          <span className="text-[#67B7FF] font-bold text-base md:text-lg">01</span>
+          <span className="text-[#67B7FF]">—</span>
+          <span className="text-[#F5F5F5]">ABOUT</span>
         </div>
 
-        {/* Editorial Heading */}
+        {/* Editorial Heading - Large & Prominent Title */}
         <div
           onMouseEnter={() => setCursorState("text")}
           onMouseLeave={resetCursorState}
-          className="mb-16"
+          className="mb-14"
         >
-          <h2 className="text-section-title font-bold tracking-tighter uppercase leading-[0.9] text-[#F5F5F5] max-w-5xl">
+          <h2 className="text-[clamp(2.5rem,5.5vw,5.5rem)] font-bold tracking-tighter uppercase leading-[0.88] text-[#F5F5F5] max-w-5xl">
             A DEVELOPER WHO LIKES TO <span className="text-[#67B7FF]">BUILD</span> THINGS.
           </h2>
         </div>
 
         {/* Editorial Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Substantial Editorial Text, Tags, & Supporting Info */}
-          <div className="lg:col-span-7 space-y-12">
-            {/* Prominent, readable body paragraphs with highlighted phrases */}
-            <div className="space-y-7 text-xl md:text-[22px] lg:text-[23px] text-[#8A8A8A] font-light leading-[1.7] max-w-[780px]">
+          {/* Left Column: Expanded Content, Tags, & Supporting Info */}
+          <div className="lg:col-span-7 space-y-10">
+            {/* Small/Medium readable body text */}
+            <div className="space-y-6 text-base md:text-[17px] lg:text-[18px] text-[#8A8A8A] font-light leading-[1.65] max-w-[720px]">
               <p>
                 I&apos;m a Computer Science & Engineering student at{" "}
                 <span className="text-[#67B7FF] font-normal">VIT Bhopal University</span>, focused on building{" "}
