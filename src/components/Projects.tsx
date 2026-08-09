@@ -61,7 +61,7 @@ export const projectsData: ProjectData[] = [
       "A comparative deep learning system evaluating CNN, LSTM, VGG16, and InceptionV3 + Attention architectures for facial manipulation detection.",
     highlight:
       "TEAM PROJECT · 5 MEMBERS — InceptionV3 + Attention achieved 100.0% test accuracy with 0 misclassifications on Dataset 1.",
-    image: "/images/deepfake_detection_preview.svg",
+    image: "/images/deepfake_detection_preview.png",
     details: {
       overview:
         "A comprehensive EPICS engineering research project at VIT Bhopal University evaluating multiple deep learning architectures for facial manipulation detection. The system incorporates MTCNN face isolation preprocessing, VGG16 transfer learning, CNN+LSTM hybrids, and an InceptionV3 model augmented with a spatial-channel attention mechanism.",
