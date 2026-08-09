@@ -109,7 +109,7 @@ export const About: React.FC = () => {
                     <p className="text-xs text-[#8A8A8A] mt-0.5">VIT Bhopal University</p>
                   </div>
                   <span className="inline-block w-fit rounded bg-[#182F48] px-3 py-1 font-mono text-xs font-bold text-[#67B7FF]">
-                    CGPA 8.23
+                    CGPA 8.24
                   </span>
                 </div>
               </div>

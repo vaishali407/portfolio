@@ -74,7 +74,7 @@ export const EducationCertifications: React.FC = () => {
 
               <div className="pt-2 flex items-center gap-4">
                 <span className="rounded-md bg-[#182F48] px-3 py-1 font-mono text-xs font-bold text-[#67B7FF]">
-                  CGPA 8.23
+                  CGPA 8.24
                 </span>
                 <span className="font-mono text-xs text-[#777777]">Full-Time Program</span>
               </div>
