@@ -39,17 +39,16 @@ export const About: React.FC = () => {
           {/* Left Column: Shorter Copy, Tags, Secondary Info */}
           <div className="lg:col-span-7 space-y-10">
             {/* Shorter, confident copy with breathing room */}
-            <div className="space-y-5 text-lg md:text-[20px] text-[#8A8A8A] font-light leading-[1.65] max-w-[700px]">
+            <div className="space-y-6 text-lg md:text-[20px] text-[#8A8A8A] font-light leading-[1.65] max-w-[700px]">
               <p>
-                I&apos;m a Computer Science & Engineering student at{" "}
-                <strong className="text-[#F5F5F5] font-normal">VIT Bhopal</strong> who enjoys turning ideas into interactive products.
+                I&apos;m a Computer Science & Engineering student at VIT Bhopal who enjoys turning ideas into interactive products.
               </p>
 
               <p>
                 I build full-stack applications, AI-powered tools, and real-time web experiences, with a particular interest in the space where software engineering meets design.
               </p>
 
-              <p className="text-[#F5F5F5] font-normal">
+              <p>
                 I like building things that aren&apos;t just functional — but actually enjoyable to use.
               </p>
             </div>
