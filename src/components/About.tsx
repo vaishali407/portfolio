@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { useCursor } from "@/context/CursorContext";
+import { SectionHeader } from "@/components/SectionHeader";
 import { Code2, Cpu, GraduationCap } from "lucide-react";
 
 export const About: React.FC = () => {
   const { setCursorState, resetCursorState } = useCursor();
+  const portraitRef = useRef<HTMLDivElement>(null);
+  const [parallaxOffset, setParallaxOffset] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!portraitRef.current) return;
+      const rect = portraitRef.current.getBoundingClientRect();
+      // Only calculate if visible
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        const x = ((e.clientX - (rect.left + rect.width / 2)) / rect.width) * 4;
+        const y = ((e.clientY - (rect.top + rect.height / 2)) / rect.height) * 4;
+        setParallaxOffset({ x, y });
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   const highlightWords = [
     "FULL-STACK",
@@ -14,32 +35,16 @@ export const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-36 px-6 md:px-12 bg-[#080808] border-t border-white/10">
+    <section id="about" className="py-44 md:py-52 lg:py-60 px-6 md:px-12 bg-[#080808] border-t border-white/10">
       <div className="max-w-[1600px] mx-auto">
-        {/* MAIN SECTION HEADING - Large & Prominent Chapter Title */}
-        <div
-          onMouseEnter={() => setCursorState("text")}
-          onMouseLeave={resetCursorState}
-          className="group relative inline-block cursor-default select-none mb-6"
-        >
-          <h1 className="font-mono text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-none transition-all duration-300">
-            <span className="text-[#67B7FF] inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:drop-shadow-[0_0_20px_rgba(103,183,255,0.4)]">
-              01
-            </span>
-            <span className="text-[#777777] mx-3 md:mx-4 font-light">—</span>
-            <span className="text-[#F5F5F5] group-hover:text-white transition-colors">
-              ABOUT
-            </span>
-          </h1>
-          {/* Subtle blue accent underline on hover */}
-          <div className="h-[2px] w-full bg-gradient-to-r from-[#67B7FF] via-[#67B7FF]/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left mt-2" />
-        </div>
+        {/* MAIN SECTION HEADING - Large & Prominent Chapter Title with Scroll Reveal */}
+        <SectionHeader number="01" title="ABOUT" sectionId="about" className="mb-8" />
 
         {/* SECONDARY HEADING - Medium Headline (Smaller than 01 — ABOUT) */}
         <div
           onMouseEnter={() => setCursorState("text")}
           onMouseLeave={resetCursorState}
-          className="mb-12"
+          className="mb-14"
         >
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight uppercase leading-snug text-[#F5F5F5] max-w-4xl">
             A DEVELOPER WHO LIKES TO <span className="text-[#67B7FF]">BUILD</span> THINGS.
@@ -138,12 +143,16 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Editorial Portrait Card */}
+          {/* Right Column: Editorial Portrait Card with Micro Parallax */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
             <div
+              ref={portraitRef}
+              style={{
+                transform: `translate3d(${parallaxOffset.x}px, ${parallaxOffset.y}px, 0)`,
+              }}
               onMouseEnter={() => setCursorState("project", "VIEW")}
               onMouseLeave={resetCursorState}
-              className="group relative rounded-2xl overflow-hidden border border-white/15 bg-[#111111] shadow-2xl transition-all duration-500 hover:border-[#67B7FF]/50"
+              className="group relative rounded-2xl overflow-hidden border border-white/15 bg-[#111111] shadow-2xl transition-transform duration-700 ease-out hover:border-[#67B7FF]/50"
             >
               <div className="relative h-[540px] sm:h-[620px] lg:h-[680px] w-full overflow-hidden">
                 <Image

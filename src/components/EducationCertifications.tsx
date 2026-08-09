@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useCursor } from "@/context/CursorContext";
 import { Award, GraduationCap, Palette } from "lucide-react";
 
+import { SectionHeader } from "@/components/SectionHeader";
+
 export const EducationCertifications: React.FC = () => {
   const { setCursorState, resetCursorState } = useCursor();
 
@@ -37,26 +39,10 @@ export const EducationCertifications: React.FC = () => {
   ];
 
   return (
-    <section id="certificates" className="py-36 px-6 md:px-12 bg-[#080808] border-t border-white/10">
+    <section id="certificates" className="py-44 md:py-52 lg:py-60 px-6 md:px-12 bg-[#080808] border-t border-white/10">
       <div className="max-w-[1600px] mx-auto space-y-20">
-        {/* MAIN SECTION HEADING - Large & Prominent Chapter Title */}
-        <div
-          onMouseEnter={() => setCursorState("text")}
-          onMouseLeave={resetCursorState}
-          className="group relative inline-block cursor-default select-none mb-12"
-        >
-          <h1 className="font-mono text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-none transition-all duration-300">
-            <span className="text-[#67B7FF] inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:drop-shadow-[0_0_20px_rgba(103,183,255,0.4)]">
-              05
-            </span>
-            <span className="text-[#777777] mx-3 md:mx-4 font-light">—</span>
-            <span className="text-[#F5F5F5] group-hover:text-white transition-colors">
-              CERTIFICATES
-            </span>
-          </h1>
-          {/* Subtle blue accent underline on hover */}
-          <div className="h-[2px] w-full bg-gradient-to-r from-[#67B7FF] via-[#67B7FF]/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left mt-2" />
-        </div>
+        {/* MAIN SECTION HEADING - Large Chapter Title with Scroll Reveal */}
+        <SectionHeader number="05" title="CERTIFICATES" sectionId="certificates" className="mb-12" />
 
         {/* Education & Leadership Dual Columns */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
