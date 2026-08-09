@@ -39,10 +39,10 @@ export const EducationCertifications: React.FC = () => {
   ];
 
   return (
-    <section id="certificates" className="py-44 md:py-52 lg:py-60 px-6 md:px-12 bg-[#080808] border-t border-white/10">
+    <section id="education" className="py-36 md:py-44 lg:py-48 px-6 md:px-12 bg-[#080808] border-t border-white/10">
       <div className="max-w-[1600px] mx-auto space-y-20">
         {/* MAIN SECTION HEADING - Large Chapter Title with Scroll Reveal */}
-        <SectionHeader number="05" title="CERTIFICATES" sectionId="certificates" className="mb-12" />
+        <SectionHeader number="05" title="EDUCATION" sectionId="education" className="mb-12" />
 
         {/* Education & Leadership Dual Columns */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">

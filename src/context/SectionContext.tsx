@@ -13,7 +13,7 @@ export const SECTIONS: SectionInfo[] = [
   { number: "02", title: "PROJECTS", id: "work" },
   { number: "03", title: "TOOLKIT", id: "skills" },
   { number: "04", title: "WORK HISTORY", id: "experience" },
-  { number: "05", title: "CERTIFICATES", id: "certificates" },
+  { number: "05", title: "EDUCATION", id: "education" },
   { number: "06", title: "CONTACT", id: "contact" },
 ];
 

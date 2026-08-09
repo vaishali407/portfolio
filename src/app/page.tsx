@@ -35,7 +35,7 @@ export default function Home() {
         <Skills />
         <SectionDivider label="04_WORK_HISTORY" />
         <Experience />
-        <SectionDivider label="05_CERTIFICATES" />
+        <SectionDivider label="05_EDUCATION" />
         <EducationCertifications />
         <SectionDivider label="06_CONTACT" />
         <Contact />
