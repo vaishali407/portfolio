@@ -80,7 +80,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden md:block">
             <a
               ref={resumeBtnRef as React.RefObject<HTMLAnchorElement>}
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1EB-BMWHQOhq8fUum_tahTqSkot9s4dsn/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={() => setCursorState("button")}
@@ -119,7 +119,7 @@ export const Navbar: React.FC = () => {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1EB-BMWHQOhq8fUum_tahTqSkot9s4dsn/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
