@@ -16,20 +16,20 @@ export const About: React.FC = () => {
   return (
     <section id="about" className="py-36 px-6 md:px-12 bg-[#080808] border-t border-white/10">
       <div className="max-w-[1600px] mx-auto">
-        {/* Section Index Header - Large & Prominent Editorial Label */}
-        <div className="flex items-center gap-4 font-mono text-sm md:text-base font-semibold text-[#8A8A8A] uppercase tracking-[0.2em] mb-6">
-          <span className="text-[#67B7FF] font-bold text-base md:text-lg">01</span>
+        {/* Section Index Header - Enlarged Editorial Label */}
+        <div className="flex items-center gap-4 font-mono text-lg md:text-xl lg:text-2xl font-bold text-[#8A8A8A] uppercase tracking-[0.2em] mb-10">
+          <span className="text-[#67B7FF]">01</span>
           <span className="text-[#67B7FF]">—</span>
           <span className="text-[#F5F5F5]">ABOUT</span>
         </div>
 
-        {/* Editorial Heading - Large & Prominent Title */}
+        {/* Editorial Heading - Restored to Original Size */}
         <div
           onMouseEnter={() => setCursorState("text")}
           onMouseLeave={resetCursorState}
           className="mb-14"
         >
-          <h2 className="text-[clamp(2.5rem,5.5vw,5.5rem)] font-bold tracking-tighter uppercase leading-[0.88] text-[#F5F5F5] max-w-5xl">
+          <h2 className="text-section-title font-bold tracking-tighter uppercase leading-[0.9] text-[#F5F5F5] max-w-5xl">
             A DEVELOPER WHO LIKES TO <span className="text-[#67B7FF]">BUILD</span> THINGS.
           </h2>
         </div>
