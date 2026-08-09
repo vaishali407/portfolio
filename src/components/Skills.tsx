@@ -39,22 +39,23 @@ export const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-36 px-6 md:px-12 bg-[#080808] border-t border-white/10">
       <div className="max-w-[1600px] mx-auto">
-        {/* Section Label */}
-        <div className="flex items-center gap-4 font-mono text-xs text-[#777777] uppercase tracking-[0.15em] mb-12">
-          <span className="text-[#67B7FF]">03</span>
-          <span>—</span>
-          <span>TOOLKIT</span>
-        </div>
-
-        {/* Section Heading */}
+        {/* MAIN SECTION HEADING - Large & Prominent Chapter Title */}
         <div
           onMouseEnter={() => setCursorState("text")}
           onMouseLeave={resetCursorState}
-          className="mb-20"
+          className="group relative inline-block cursor-default select-none mb-20"
         >
-          <h2 className="text-section-title font-bold tracking-tighter uppercase leading-[0.88] text-[#F5F5F5]">
-            WHAT I WORK WITH.
-          </h2>
+          <h1 className="font-mono text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-none transition-all duration-300">
+            <span className="text-[#67B7FF] inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:drop-shadow-[0_0_20px_rgba(103,183,255,0.4)]">
+              03
+            </span>
+            <span className="text-[#777777] mx-3 md:mx-4 font-light">—</span>
+            <span className="text-[#F5F5F5] group-hover:text-white transition-colors">
+              TOOLKIT
+            </span>
+          </h1>
+          {/* Subtle blue accent underline on hover */}
+          <div className="h-[2px] w-full bg-gradient-to-r from-[#67B7FF] via-[#67B7FF]/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left mt-2" />
         </div>
 
         {/* Editorial Compact Typographic Categories */}
