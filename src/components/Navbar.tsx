@@ -8,18 +8,20 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 export const Navbar: React.FC = () => {
   const { setCursorState, resetCursorState } = useCursor();
   const resumeBtnRef = useMagnetic(0.3);
-  const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setScrolled(true);
+      if (window.scrollY > 20) {
+        setIsVisible(true);
       } else {
-        setScrolled(false);
+        setIsVisible(false);
       }
     };
-    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -30,13 +32,15 @@ export const Navbar: React.FC = () => {
     { label: "CONTACT", href: "#contact" },
   ];
 
+  const showHeader = isVisible || mobileMenuOpen;
+
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-          scrolled
-            ? "py-4 bg-[#080808]/80 backdrop-blur-md border-b border-white/10"
-            : "py-7 bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-40 py-4 bg-[#080808]/80 backdrop-blur-md border-b border-white/10 transition-all duration-500 ease-in-out transform ${
+          showHeader
+            ? "translate-y-0 opacity-100 pointer-events-auto"
+            : "-translate-y-full opacity-0 pointer-events-none"
         }`}
       >
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 flex items-center justify-between">
